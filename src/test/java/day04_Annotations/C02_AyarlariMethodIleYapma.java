@@ -33,11 +33,9 @@ public class C02_AyarlariMethodIleYapma {
     public void testotomasyonTesti(){
         setup();
         // test otomasyonu sayfasina gidin
-
         driver.get("https://www.testotomasyonu.com");
 
         // title'in Test Otomasyonu icerdigini test edin
-
         String expectedTitleIcerik = "Test Otomasyonu";
         String actualTitle = driver.getTitle();
 
