@@ -23,13 +23,16 @@ public class C03_AssertionsMethodlari {
 
         // url'in https://www.testotomasyonu.com/ oldugunu test edin
 
-        String expectedUrl = "https://www.testotomasyonu.com/";
+        String expectedUrl = "https://www.testotomasyonu.com";
         String actualUrl = driver.getCurrentUrl();
 
-        // Assertions.assertEquals(expectedUrl,actualUrl);
+        Assertions.assertEquals(expectedUrl,actualUrl);
 
+        // bir Test methodu calistirildiginda
+        // kodlarda RunTime'da olusan bir hata varsa
+        // JUnit hata olan bolumun altini TURUNCU NOKTALAR ile belirlginlestirir
 
-        Assertions.assertTrue(expectedUrl.equals(actualUrl));
+        // Assertions.assertTrue(expectedUrl.equals(actualUrl));
 
         ReusableMethods.bekle(2);
         driver.quit();
