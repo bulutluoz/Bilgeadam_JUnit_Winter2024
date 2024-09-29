@@ -10,7 +10,7 @@ import utilities.TestBase_Each;
 
 
 
-public class C08_Actions extends TestBase_Each {
+public class C08_Actions_ContextClick extends TestBase_Each {
 
     @Test
     public void test01(){
