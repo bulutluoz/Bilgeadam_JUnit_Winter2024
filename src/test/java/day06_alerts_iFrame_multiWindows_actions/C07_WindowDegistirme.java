@@ -12,6 +12,32 @@ public class C07_WindowDegistirme extends TestBase_Each {
     @Test
     public void test01(){
 
+        /*
+            Normal sartlarda bir sayfada bir webelement tiklandiginda
+            driver AYNI WINDOW'da farkli bir SAYFA'nin acilmasi bekler
+
+            1- Eger farkli bir window acmamiz istenirse
+               driver.switchTo().newWindow() ile kontrollu olarak
+               yeni window'u driver'a olusturtabiliriz
+
+            2- kontrollu yeni window olusturuldugunda
+               islem driver'a yaptirildigi icin
+               driver otomatik olarak yeni window'a gecer
+               Eger eski window'lara donmemiz gerekiyorsa
+               her window'un windowHandleDegeri kaydedilip
+               gerektiginde driver.switchTo().window(hedefSayfaninWindowHandleDegeri)
+               yazilarak hedeflenen window'a gecilebilir.
+
+             3- Eger windowHandleDegeerlerini kaydetmemissek
+                veya yeni window KONTROLSUZ olarak acilirsa
+                Hedef window'un windowHandleDegeri bilinmediginden
+                bir Set ile tum windowHandleDegerleri elden gecirilip
+                belirlenen TITLE veya URL ile ayni olan window'a gecilebilir
+
+         */
+
+
+
         //● https://the-internet.herokuapp.com/windows adresine gidin.
         driver.get("https://the-internet.herokuapp.com/windows");
         //● Sayfadaki textin “Opening a new window” olduğunu doğrulayın.
