@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.ReusableMethods;
 
@@ -74,9 +75,13 @@ public class C09_Waits {
         // 1.adim WebDriverWait objesi olusturalim
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(50));
 
+        // 2.adim kullanmak istedigimiz WebElementi locate edelim
+        //   textbox yukarda locate edilip kaydedildi
 
+        // 3. wait objesi ile webelement'i istenen islem kadar bekletelim
 
-
+        // ve textbox etkin oluncaya kadar bekleyin
+        wait.until(ExpectedConditions.elementToBeClickable(textBox));
 
         //6. “It’s enabled!” mesajinin goruntulendigini dogrulayın.
 
