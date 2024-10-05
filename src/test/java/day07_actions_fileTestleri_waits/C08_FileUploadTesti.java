@@ -49,8 +49,6 @@ public class C08_FileUploadTesti extends TestBase_Each {
 
         Assertions.assertTrue(fileUploadedElementi.isDisplayed());
 
-        ReusableMethods.bekle(3);
-
 
     }
 }
