@@ -91,6 +91,33 @@ public class C02_KlasikWebTables extends TestBase_Each {
 
         //10. 4.satirdaki category degerinin "Furniture" oldugunu test edin
 
+        String expectedDeger = "Furniture";
+        String actualDeger = getDataValue(4,2);
+
+        Assertions.assertEquals(expectedDeger,actualDeger);
+
+
+        // 11. ismi "Samsung White Smart Watch" olan urunun
+        // fiyatinin "$40.00" oldugunu test edin
+
+        // bu urunun kacinci satirda oldugunu bilmiyoruz
+        // ama hangi satirda ise 1.data isim, 3.data fiyat
+        // tum satirlari bir loop ile elden gecirebiliriz
+
+        for (int i = 1; i <= satirElementleriList.size() ; i++) { // 1.satirdan 5.satira kadar
+
+            String satirdakiIsim = getDataValue(i,1);
+            String satirdakiFiyat = getDataValue(i,3);
+
+            if (satirdakiIsim.equals("Samsung White Smart Watch")){
+
+                Assertions.assertEquals(satirdakiFiyat,"$40.00");
+            }
+
+        }
+
+
+
         ReusableMethods.bekle(2);
     }
 
